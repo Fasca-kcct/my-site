@@ -1,0 +1,7 @@
+    {
+        "semi": false,
+        "bracketSpacing": true,
+        "bracketSameLine": true,
+        "jsxBracketSameLine": true,
+        "tabWidth": 2
+    }
