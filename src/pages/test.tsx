@@ -4,19 +4,19 @@ import ReactMarkdown from "react-markdown"
 import Layout from "components/Layout"
 
 type StaticProps = {
-  about: string
+  tests: string
 }
 
-const About: NextPage<StaticProps> = (props) => {
-  const { about } = { ...props }
+const Tests: NextPage<StaticProps> = (props) => {
+  const { tests } = { ...props }
   return (
     <>
       <Layout>
         <main>
           <ReactMarkdown
             skipHtml={true}
-            className="prose prose-stone mt-5 max-w-4xl m-auto ml-5">
-            {about}
+            className="prose prose-stone mt-5 max-w-4xl m-auto">
+            {tests}
           </ReactMarkdown>
         </main>
       </Layout>
@@ -25,12 +25,12 @@ const About: NextPage<StaticProps> = (props) => {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const about = fs.readFileSync(process.cwd() + "/docs/about.md", "utf8")
+  const tests = fs.readFileSync(process.cwd() + "/docs/test.md", "utf8")
   return {
     props: {
-      about: about,
+      tests: tests,
     },
   }
 }
 
-export default About
+export default Tests

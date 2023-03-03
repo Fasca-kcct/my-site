@@ -1,4 +1,5 @@
 import Navbar from "./navbar"
+import Footer from "./footer"
 
 type LayoutProps = {
   children: React.ReactNode
@@ -6,9 +7,10 @@ type LayoutProps = {
 
 export default function Layout({ children }: LayoutProps) {
   return (
-    <div className="content">
+    <div className="flex flex-col">
       <Navbar />
       {children}
+      <Footer />
     </div>
   )
 }
